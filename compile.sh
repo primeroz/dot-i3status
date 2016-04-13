@@ -8,20 +8,20 @@
 ##############################################################################
 
 # Config
-grep -v '^ *\(#.*\|\)$' < $HOME/.config/i3status/config.d/*.conf > $HOME/.config/i3status/i3status.conf
+grep -v '^ *\(#.*\|\)$' < $HOME/.config/i3status/config.d/*.conf > $HOME/.config/i3status/config
 
 # Smart config
-$HOME/.config/i3status/config.d/*.sh >> $HOME/.config/i3status/i3status.conf
+$HOME/.config/i3status/config.d/*.sh >> $HOME/.config/i3status/config
 
 ##############################################################################
 
 # Local config
 if [ -d ~/.local/i3status/config.d ]; then
     # Local config
-    grep -v '^ *\(#.*\|\)$' < $HOME/.local/i3status/config.d/*.conf >> $HOME/.config/i3status/i3status.conf
+    grep -v '^ *\(#.*\|\)$' < $HOME/.local/i3status/config.d/*.conf >> $HOME/.config/i3status/config
 
     # Local smart config
-    $HOME/.local/i3status/config.d/*.sh >> $HOME/.config/i3status/i3status.conf
+    $HOME/.local/i3status/config.d/*.sh >> $HOME/.config/i3status/config
 fi
 
 ##############################################################################

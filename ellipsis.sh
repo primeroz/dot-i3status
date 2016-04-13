@@ -10,15 +10,10 @@
 pkg.link() {
     # Link package into ~/.i3
     fs.link_file "$PKG_PATH" "$ELLIPSIS_HOME/.config/i3status"
+    $PKG_PATH/compile.sh
 }
 
 ##############################################################################
-
-pkg.install(){
-    # compile the i3 config file from config.d
-    #~/.config/.i3/compile.sh
-    $PKG_PATH/compile.sh
-}
 
 ##############################################################################
 
